@@ -1,3 +1,5 @@
+// hello.js - Basic JavaScript examples for beginners
+// Run this file with: node hello.js
 console.log("Hello, Node.js! My first program.");
 const message = "My Node.js app is running!";
 console.log(message);
@@ -5,6 +7,11 @@ const name = "Hank";
 console.log(`Hello, ${name}! Learning Node.js is fun!`);
 let age = 25;
 console.log(`I am ${age} years old.`);
+if (age >= 18) {
+  console.log("You are an adult.");
+} else {
+  console.log("You are a minor.");
+}
 age = 30;
 console.log(`I am now ${age} years old.`);
 let isStudent = true;
@@ -15,6 +22,9 @@ let hobbies = ["reading", "coding", "gaming"];
 console.log(`My hobbies: ${hobbies.join(", ")}`);
 hobbies.push("traveling");
 console.log(`My updated hobbies: ${hobbies.join(", ")}`);
+for (const hobby of hobbies) {
+  console.log(`I enjoy ${hobby}`);
+}
 let person = {
   name: "Hank",
   age: 25,
@@ -47,17 +57,22 @@ sayHello();
 let number = [1, 2, 3, 4, 5];
 let double = number.map((num) => num * 2);
 let evens = number.filter((num) => num % 2 === 0);
-let summ = number.reduce((acc, num) => acc + num, 0);
+let sumNumbers = number.reduce((acc, num) => acc + num, 0);
 console.log(`Double of the numbers: ${double.join(", ")}`);
 console.log(`Evens of the numbers: ${evens.join(", ")}`);
-console.log(`Sum of the numbers: ${summ}`);
+console.log(`Sum of the numbers: ${sumNumbers}`);
+for (let i = 0; i < number.length; i++) {
+  console.log(`number[${i}] = ${number[i]}`);
+}
 
 let fruit = ["apple", "banana", "orange"];
 fruit.push("grape");
 let upperCaseFruit = fruit.map((fruit) => fruit.toUpperCase());
-let fruitLength = fruit.map((fruit) => fruit.length > 5);
+let fruitLengths = fruit.map((fruit) => fruit.length);
+let longFruits = fruit.filter((fruit) => fruit.length > 5);
 console.log(`Uppercase fruits: ${upperCaseFruit.join(", ")}`);
-console.log(`Fruits with more than 5 characters: ${fruitLength.join(", ")}`);
+console.log(`Fruit name lengths: ${fruitLengths.join(", ")}`);
+console.log(`Fruits with more than 5 characters: ${longFruits.join(", ")}`);
 
 let student = {
   name: "Hank",
